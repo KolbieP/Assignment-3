@@ -1,6 +1,7 @@
 /***********************************
   A game based on exiting a maze.
   If you touch any obstacles, you have to start over.
+  There are three levels which increase with difficulty 
 ************************************/
 
 var doorOpen = 0;
@@ -28,6 +29,7 @@ let redCircle;
 let greenCircle;
 let yellowCircle;
 let pinkCircle;
+let purpleCircle;
 
 //Level 2
 let blueSquircle;
@@ -36,6 +38,14 @@ let greenSquircle;
 let yellowSquircle;
 let pinkSquircle;
 let purpleSquircle;
+
+//Level 3 
+let blueRhombus;
+let redRhombus;
+let greenRhombus;
+let yellowRhombus;
+let pinkRhombus;
+let purpleRhombus;
 
 
 function setup() {
@@ -67,6 +77,7 @@ function preload() {
   greenCircle = loadImage('/libraries/green_body_circle.png');
   yellowCircle = loadImage('/libraries/yellow_body_circle.png');
   pinkCircle = loadImage('/libraries/pink_body_circle.png');
+  purpleCircle = loadImage('/libraries/purple_body_circle.png');
 
   //Level 2
   blueSquircle = loadImage('/libraries/blue_body_squircle.png');
@@ -75,6 +86,7 @@ function preload() {
   yellowSquircle = loadImage('/libraries/yellow_body_squircle.png');
   pinkSquircle = loadImage('/libraries/pink_body_squircle.png');
   purpleSquircle = loadImage('/libraries/purple_body_squircle.png');
+
 }
 
 function draw() {
@@ -360,5 +372,199 @@ function level2() {
 }
 
 function level3() {
+  //Blue 
+  image(blueSquircle, 30, 100);
+  image(aFace, 40, 120);
+  // square(30, 100, 80, 20);
+  image(blueCircle, 80, 350);
+  image(bFace, 90, 370);
+  // square(80, 350, 80, 20);
+  image(blueSquircle, 600, 350);
+  image(cFace, 610, 370);
+  // square(600, 350, 80, 20);
 
+
+  //Red 
+  image(redSquircle, 600, 500);
+  image(dFace, 610, 520);
+  // square(600, 500, 80, 20);
+  image(redCircle, 300, 400);
+  image(eFace, 310, 420);
+  // square(300, 400, 80, 20);
+  image(redSquircle, 200, 200);
+  image(fFace, 210, 220);
+  // square(200, 200, 80, 20);
+
+
+  //Green
+  image(greenSquircle, 200, 40);
+  image(gFace, 210, 60);
+  // square(200, 40, 80, 20);
+  image(greenCircle, 400, 100);
+  image(hFace, 410, 120);
+  // square(400, 100, 80, 20);
+  image(greenSquircle, 500, 400);
+  image(iFace, 510, 420);
+  // square(500, 400, 80, 20);
+
+
+  //Yellow
+  image(yellowSquircle, 400, 300);
+  image(jFace, 410, 320);
+  // square(400, 300, 80, 20);
+  image(yellowCircle, 700, 400);
+  image(kFace, 710, 420);
+  // square(700, 400, 80, 20);
+  image(yellowSquircle, 700, 200);
+  image(lFace, 710, 220);
+  // square(700, 200, 80, 20);
+
+
+  //Pink
+  image(pinkSquircle, 700, 300);
+  image(aFace, 720, 320);
+  // square(700, 300, 80, 20);
+  image(pinkCircle, 400, 500);
+  image(bFace, 410, 520);
+  // square(400, 500, 80, 20);
+  image(pinkSquircle, 500, 200);
+  image(cFace, 510, 220);
+  // square(500, 200, 80, 20);
+
+
+  //Purple
+  image(purpleSquircle, 500, 310);
+  image(dFace, 510, 330);
+  // square(500, 310, 80, 20);
+  image(purpleCircle, 230, 300);
+  image(eFace, 240, 320);
+  // square(230, 300, 80, 20);
+  image(purpleSquircle, 200, 500);
+  image(fFace, 210, 520);
+  // square(200, 500, 80, 20);
+
+
+  // Lose Scenarios
+  // Blue
+  // square(30, 100, 80, 20);
+  if (mouseX > 30 && mouseX < 110 && mouseY > 100 && mouseY < 180) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // square(80, 350, 80, 20);
+  if (mouseX > 80 && mouseX < 160 && mouseY > 350 && mouseY < 430) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // square(600, 350, 80, 20);
+  if (mouseX > 600 && mouseX < 680 && mouseY > 350 && mouseY < 430) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // Red
+  // square(600, 500, 80, 20);
+  if (mouseX > 600 && mouseX < 680 && mouseY > 500 && mouseY < 580) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // square(300, 400, 80, 20);
+  if (mouseX > 300 && mouseX < 380 && mouseY > 400 && mouseY < 480) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // square(200, 200, 80, 20);
+  if (mouseX > 200 && mouseX < 280 && mouseY > 200 && mouseY < 280) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // Green
+  // square(200, 40, 80, 20);
+  if (mouseX > 200 && mouseX < 280 && mouseY > 40 && mouseY < 120) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // square(400, 100, 80, 20);
+  if (mouseX > 400 && mouseX < 480 && mouseY > 100 && mouseY < 180) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // square(500, 400, 80, 20);
+  if (mouseX > 500 && mouseX < 580 && mouseY > 400 && mouseY < 480) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // Yellow
+  // square(400, 300, 80, 20);
+  if (mouseX > 400 && mouseX < 480 && mouseY > 300 && mouseY < 380) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // square(700, 400, 80, 20);
+  if (mouseX > 700 && mouseX < 780 && mouseY > 400 && mouseY < 480) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // square(700, 200, 80, 20);
+  if (mouseX > 700 && mouseX < 780 && mouseY > 200 && mouseY < 280) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // Pink
+  // square(700, 300, 80, 20);
+  if (mouseX > 700 && mouseX < 780 && mouseY > 300 && mouseY < 380) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // square(400, 500, 80, 20);
+  if (mouseX > 400 && mouseX < 480 && mouseY > 500 && mouseY < 580) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // square(500, 200, 80, 20);
+  if (mouseX > 500 && mouseX < 580 && mouseY > 200 && mouseY < 280) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // Purple
+  // square(500, 310, 80, 20);
+  if (mouseX > 500 && mouseX < 580 && mouseY > 310 && mouseY < 390) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // square(230, 300, 80, 20);
+  if (mouseX > 230 && mouseX < 310 && mouseY > 300 && mouseY < 380) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // square(200, 500, 80, 20);
+  if (mouseX > 200 && mouseX < 280 && mouseY > 500 && mouseY < 580) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000';
+  }
+  // Outside the canvas
+  if (mouseX > width || mouseX < 0 || mouseY > height || mouseY < 2) {
+    ready = 0;
+    endMsg = "You Lose!";
+    color = '#990000'
+  }
+  if (mouseX == 0 && mouseY == 0)
+    ready = -1;
 }
