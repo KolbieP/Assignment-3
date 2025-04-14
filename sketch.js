@@ -9,6 +9,7 @@ var ready = -1;
 var endMsg = "";
 var color;
 var level = 1;
+
 //Faces
 let aFace;
 let bFace;
@@ -47,7 +48,6 @@ let yellowRhombus;
 let pinkRhombus;
 let purpleRhombus;
 
-
 function setup() {
   createCanvas(800, 600);
   background(220);
@@ -69,7 +69,6 @@ function preload() {
   jFace = loadImage('/libraries/face_j.png');
   kFace = loadImage('/libraries/face_k.png');
   lFace = loadImage('/libraries/face_l.png');
-
 
   //Level 1
   blueCircle = loadImage('/libraries/blue_body_circle.png');
@@ -111,7 +110,6 @@ function draw() {
 
   // Obstacles and Walls
   fill(0);
-
 
   // Call the function for the current level
   if (level == 1) {
